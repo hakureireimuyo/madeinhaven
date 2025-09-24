@@ -1,6 +1,6 @@
 from kivy.core.audio import SoundLoader
 from kivy.clock import Clock
-from src.evn import get_resource_path
+from src.res import get_resource_path
 
 class AudioPlayer:
     """音频播放器类，处理音频加速效果"""

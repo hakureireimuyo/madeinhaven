@@ -1,2 +1,9 @@
 /.venv
 /__pycache__
+/.buildozer
+/bin
+/.vscode
+*.pyc
+/bin
+/pyjnius
+__pycache__

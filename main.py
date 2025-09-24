@@ -150,9 +150,12 @@ class TimeCatchClockApp(MDApp):
         
         # 停止追赶音效
         self.audio_player.stop_all()
+
     def on_start(self):
         """应用启动时的初始化"""
         Window.size = (800, 1000)
+        print("App started")
+        
     def on_stop(self):
         """应用关闭时保存当前时间"""
         self.time_data_manager.save_time_data()
@@ -160,4 +163,11 @@ class TimeCatchClockApp(MDApp):
 
 
 if __name__ == '__main__':
-    TimeCatchClockApp().run()
+    try:
+        TimeCatchClockApp().run()
+    except Exception as e:
+        import traceback
+        with open('error.log', 'w') as f:
+            f.write(str(e))
+            f.write(traceback.format_exc())
+        print("Error occurred, see error.log for details")
