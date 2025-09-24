@@ -2,7 +2,7 @@ import json
 import os
 import time
 from datetime import datetime
-from src.res import get_resource_path
+from src.evn import get_resource_path
 
 class TimeDataManager:
     """时间数据管理器，处理时间数据的加载和保存"""

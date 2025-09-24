@@ -3,7 +3,7 @@ from kivy.graphics import Color, Rectangle, Rotate, PushMatrix, PopMatrix
 from kivy.core.image import Image as CoreImage
 from kivy.properties import NumericProperty, StringProperty, ObjectProperty,ListProperty
 # from src.evn import get_resource_path
-from src.res import get_resource_path
+from src.evn import get_resource_path
 
 class AnalogClock(Widget):
     """模拟时钟部件，带有时针、分针和秒针，使用固定旋转中心点"""

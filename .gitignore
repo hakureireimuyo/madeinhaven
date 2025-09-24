@@ -7,3 +7,4 @@
 /bin
 /pyjnius
 __pycache__
+*.json

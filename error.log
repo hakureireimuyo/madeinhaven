@@ -1,0 +1,14 @@
+'NoneType' object has no attribute 'split'Traceback (most recent call last):
+  File "d:\ProjectFloder\Python\madeinhaven\main.py", line 167, in <module>
+    TimeCatchClockApp().run()
+  File "D:\ProjectFloder\Python\madeinhaven\.venv\lib\site-packages\kivy\app.py", line 955, in run
+    self._run_prepare()
+  File "D:\ProjectFloder\Python\madeinhaven\.venv\lib\site-packages\kivy\app.py", line 925, in _run_prepare
+    root = self.build()
+  File "d:\ProjectFloder\Python\madeinhaven\main.py", line 32, in build
+    self.audio_player = AudioPlayer()
+  File "d:\ProjectFloder\Python\madeinhaven\src\audio.py", line 9, in __init__
+    self.catchup_sound = SoundLoader.load(get_resource_path('catchup_sound.wav'))
+  File "D:\ProjectFloder\Python\madeinhaven\.venv\lib\site-packages\kivy\core\audio\__init__.py", line 80, in load
+    ext = filename.split('.')[-1].lower()
+AttributeError: 'NoneType' object has no attribute 'split'

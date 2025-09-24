@@ -1,13 +1,21 @@
 from kivy.core.audio import SoundLoader
 from kivy.clock import Clock
-from src.res import get_resource_path
+from src.evn import get_resource_path
+import os
 
 class AudioPlayer:
     """音频播放器类，处理音频加速效果"""
     def __init__(self):
-        self.tick_sound = SoundLoader.load(get_resource_path('tick_sound.wav'))
-        self.catchup_sound = SoundLoader.load(get_resource_path('catchup_sound.wav'))
-        self.crucified_sound = SoundLoader.load(get_resource_path('crucified.wav'))
+
+        tick_path = get_resource_path('tick_sound.wav')
+        catchup_path = get_resource_path('catchup_sound.wav')
+        crucified_path = get_resource_path('crucified.wav')
+        
+        # 检查文件是否存在
+        self.tick_sound = SoundLoader.load(tick_path) if tick_path and os.path.exists(tick_path) else None
+        self.catchup_sound = SoundLoader.load(catchup_path) if catchup_path and os.path.exists(catchup_path) else None
+        self.crucified_sound = SoundLoader.load(crucified_path) if crucified_path and os.path.exists(crucified_path) else None
+       
         self.current_rate = 1.0
         
         # 淡出相关属性
